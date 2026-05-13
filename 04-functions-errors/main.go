@@ -16,6 +16,11 @@ func divide(a, b float64) (float64, error) {
 	return a / b, nil
 }
 
+//여기서 함수 작성
+func add(a,b int) int {
+	return a + b
+}
+
 func main() {
 	fmt.Println(greet("Alice"))
 
@@ -26,11 +31,15 @@ func main() {
 		fmt.Printf("result: %.2f\n", result)
 	}
 
+	//함수 실행
+	num := add(10, 20)
+	fmt.Println("add:", num)
+	
 	result, err = divide(5, 0)
 	if err != nil {
 		fmt.Println("error:", err)
 		return
 	}
-
 	fmt.Println("result:", result)
+
 }
