@@ -6,10 +6,12 @@ type Person struct {
 	Name string
 	Age  int
 	City string
+	//email 추가
+	Email string
 }
 
 func (p Person) Introduce() string {
-	return fmt.Sprintf("저는 %s이고 %d살입니다. 사는 곳은 %s입니다.", p.Name, p.Age, p.City)
+	return fmt.Sprintf("저는 %s이고 %d살입니다. email은 %s입니다. 사는 곳은 %s입니다.", p.Name, p.Age, p.Email, p.City)
 }
 
 func (p Person) IsAdult() bool {
@@ -25,6 +27,7 @@ func main() {
 		Name: "Alice",
 		Age:  20,
 		City: "Seoul",
+		Email: "alice@example.com",
 	}
 
 	fmt.Println(person.Introduce())
