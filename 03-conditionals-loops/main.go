@@ -37,4 +37,11 @@ func main() {
 	for index, value := range fruits {
 		fmt.Printf("[%d] %s\n", index, value)
 	}
+
+	// 여기서부터 수정
+	for i := 1; i <= 100; i++ {
+		if i % 2 == 0 {
+			fmt.Printf("%d\n", i)
+		}
+	}
 }
